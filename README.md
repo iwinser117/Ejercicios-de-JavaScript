@@ -92,7 +92,12 @@ Escribir una función llamada `imprimirArreglo` que reciba un arreglo e imprima 
 
 ```javascript
 // escribe tu respuesta acá
-
+function imprimirArreglo(...element) {
+  const array = [... element];
+  array.forEach((e) => {
+    console.log(`${e}`);
+  });
+}
 // código de prueba
 console.log(imprimirArreglo(1, "Hola", 2, "Mundo"))
 // 1
@@ -115,6 +120,23 @@ Si el número es menor a 1000 se debe devolver el mismo número como un string.
 
 ```javascript
 // escribe tu respuesta acá
+function likes(numero) {
+  let dat = numero.toString();
+  if(dat.length < 4 ){
+    return console.log(dat)
+  }
+  if (dat.length == 4) {
+    console.log(dat.substring(0, 1) + "k");
+  } else if (dat.length <= 5) {
+    console.log(dat.substring(0, 2) + "k");
+  } else if (dat.length <= 6) {
+    console.log(dat.substring(0, 3) + "k");
+  } else if (dat.length == 7) {
+    console.log(dat.substring(0, 1) + "M");
+  } else if (dat.length >= 8) {
+    console.log(dat.substring(0, 2) + "M");
+  }
+}
 
 // código de prueba
 console.log(likes(983)) // "983"
@@ -135,7 +157,21 @@ Escribir una función llamada `fizzBuzz` que reciba un número y retorne un stri
 
 ```javascript
 // escribe tu respuesta acá
-
+function fizzBuzz (numero){
+    let m3 = numero % 3 ===0;
+    let m5 = numero % 5 ===0;
+    if (m3 && m5) {
+      console.log("fizzBuzz");
+    }
+    else if(m3){
+        console.log("fizz")
+    }
+    else if (m5) {
+      console.log("buzz");
+    }else {
+        console.log(numero)
+    }
+}
 // código de prueba
 console.log(fizzBuzz(6)); // "fizz"
 console.log(fizzBuzz(20)); // "buzz"

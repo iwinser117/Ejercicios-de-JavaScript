@@ -187,7 +187,15 @@ Escribir una función llamada `contarRango` que reciba dos números y retorne cu
 
 ```javascript
 // escribe tu respuesta acá
-
+function contarRango (n1, n2){
+    let contador = 0;
+    for (let i = 0 ; n1 < n2;i++){
+        n1++
+        contador = i
+        
+    }
+    console.log(contador);
+}
 // código de prueba
 console.log(contarRango(1, 9)) // 7
 console.log(contarRango(1332, 8743)) // 7410
@@ -202,7 +210,18 @@ Escribir una función llamada `sumarRango` que reciba dos argumentos: número in
 
 ```javascript
 // escribe tu respuesta acá
-
+function sumarRango(ni, nf) {
+  acumulador = ni;
+  if (acumulador != 0) {
+    for (let i = 0; ni < nf; i++) {
+      ni++;
+      acumulador += ni;
+    }
+    console.log(acumulador);
+  }else{
+    return 0
+  }
+}
 // código de prueba
 console.log(sumarRango(0, 10)) // 55
 console.log(sumarRango(12, 14)) // 39
@@ -218,7 +237,16 @@ Escribir una función llamada `numeroDeCaracteres` que reciba un string y un car
 
 ```javascript
 // escribe tu respuesta acá
-
+function numeroDeCaracteres(string, caracter) {
+  let nVeces = 0;
+  string1 = string.split("");
+  string1.forEach((letra) => {
+    if (letra === caracter) {
+      nVeces++;
+    }
+  });
+  console.log(nVeces);
+}
 // código de prueba
 console.log(numeroDeCaracteres("Hola Mundo", "o")) // 2
 console.log(numeroDeCaracteres("MMMMM", "m")) // 0

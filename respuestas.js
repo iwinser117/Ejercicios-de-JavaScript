@@ -69,3 +69,37 @@
 //         console.log(numero)
 //     }
 // }
+
+// function contarRango (n1, n2){
+//     let contador = 0;
+//     for (let i = 0 ; n1 < n2;i++){
+//         n1++
+//         contador = i
+
+//     }
+//     console.log(contador);
+// }
+
+// function sumarRango(ni, nf) {
+//   acumulador = ni;
+//   if (acumulador != 0) {
+//     for (let i = 0; ni < nf; i++) {
+//       ni++;
+//       acumulador += ni;
+//     }
+//     console.log(acumulador);
+//   }else{
+//     return 0
+//   }
+// }
+function numeroDeCaracteres(string, caracter) {
+  let nVeces = 0;
+  string1 = string.split("");
+  string1.forEach((letra) => {
+    if (letra === caracter) {
+      nVeces++;
+    }
+  });
+  console.log(nVeces);
+}
+

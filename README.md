@@ -259,7 +259,13 @@ Escribir una función llamada `sumarArreglo` que reciba un arreglo de números y
 
 ```javascript
 // escribe tu respuesta acá
-
+function sumarArreglo(array) {
+  let acumulador = 0;
+  array.forEach((item) => {
+    acumulador += item;
+  });
+  console.log(acumulador);
+}
 // código de prueba
 console.log(sumarArreglo([3, 1, 2])) // 6
 console.log(sumarArreglo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) // 55
@@ -272,7 +278,13 @@ Escribir una función llamada `multiplicarArreglo` que reciba un arreglo de núm
 
 ```javascript
 // escribe tu respuesta acá
-
+function multiplicarArreglo(array){
+    let acumulador =  1;
+    array.forEach((item) => {
+        acumulador *= item;
+    });
+    console.log(acumulador);
+}
 // código de prueba
 console.log(multiplicarArreglo([4, 1, 2, 3])) // 24
 console.log(multiplicarArreglo([1, 2, 3, 4, 5, 6, 7, 8])) // 40320
@@ -285,7 +297,11 @@ Escribir una función llamada `removerCeros` que reciba un arreglo de números y
 
 ```javascript
 // escribe tu respuesta acá
-
+function removerCeros(array) {
+  // array.flat(3);
+  let rsta = array.filter(n => n != 0)
+  console.log(rsta)
+}
 // código de prueba
 console.log(removerCeros([0, 1, 0, 2, 0, 3])) // [1, 2, 3]
 console.log(removerCeros([9, 3, 6, 4])) // [9, 3, 6, 4]
@@ -300,7 +316,14 @@ Escribir una función llamada `sumarArreglo` que reciba tres argumentos: un arre
 
 ```javascript
 // escribe tu respuesta acá
-
+function sumarArreglo(array, pI, pF) {
+  let acumulador = 0;
+  let rta = pI >= pF ? 0 : array.slice(pI, pF + 1);
+  for (let item = 0; item < rta.length; item++) {
+    acumulador += rta[item];
+  }
+  console.log(acumulador);
+}
 // código de prueba
 console.log(sumarArreglo([1, 2, 3], 1, 2)) // 5
 console.log(sumarArreglo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3, 6)) // 22
@@ -320,7 +343,22 @@ Los complementos son los siguientes:
 
 ```javascript
 // escribe tu función acá
-
+function transcribir(string) {
+  const arrString = string.split("");
+  for (let i = 0; i < arrString.length; i++) {
+    if (arrString[i] === "G") {
+      arrString[i] = "C";
+    } else if (arrString[i] === "C") {
+      arrString[i] = "G";
+    } else if (arrString[i] === "T") {
+      arrString[i] = "A";
+    } else if (arrString[i] === "A") {
+      arrString[i] = "U";
+    }
+  }
+  let rta = String(arrString);
+  console.log(rta);
+}
 // código de prueba
 console.log(transcribir("ACGT")) // "UGCA"
 console.log(transcribir("ACGTGGTCTTAA")) // "UGCACCAGAAUU"

@@ -92,14 +92,61 @@
 //     return 0
 //   }
 // }
-function numeroDeCaracteres(string, caracter) {
-  let nVeces = 0;
-  string1 = string.split("");
-  string1.forEach((letra) => {
-    if (letra === caracter) {
-      nVeces++;
-    }
-  });
-  console.log(nVeces);
-}
+// function numeroDeCaracteres(string, caracter) {
+//   let nVeces = 0;
+//   string1 = string.split("");
+//   string1.forEach((letra) => {
+//     if (letra === caracter) {
+//       nVeces++;
+//     }
+//   });
+//   console.log(nVeces);
+// }
 
+// function sumarArreglo(array) {
+//   let acumulador = 0;
+//   array.forEach((item) => {
+//     acumulador += item;
+//   });
+//   console.log(acumulador);
+// }
+
+// function multiplicarArreglo(array){
+//     let acumulador =  1;
+//     array.forEach((item) => {
+//         acumulador *= item;
+//     });
+//     console.log(acumulador);
+// }
+
+// function removerCeros(array) {
+//   // array.flat(3);
+//   let rsta = array.filter(n => n != 0)
+//   console.log(rsta)
+// }
+
+// function sumarArreglo(array, pI, pF) {
+//   let acumulador = 0;
+//   let rta = pI >= pF ? 0 : array.slice(pI, pF + 1);
+//   for (let item = 0; item < rta.length; item++) {
+//     acumulador += rta[item];
+//   }
+//   console.log(acumulador);
+// }
+
+// function transcribir(string) {
+//   const arrString = string.split("");
+//   for (let i = 0; i < arrString.length; i++) {
+//     if (arrString[i] === "G") {
+//       arrString[i] = "C";
+//     } else if (arrString[i] === "C") {
+//       arrString[i] = "G";
+//     } else if (arrString[i] === "T") {
+//       arrString[i] = "A";
+//     } else if (arrString[i] === "A") {
+//       arrString[i] = "U";
+//     }
+//   }
+//   let rta = String(arrString);
+//   console.log(rta);
+// }

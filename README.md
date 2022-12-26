@@ -371,6 +371,12 @@ Escribir una función llamada `capitalizar` que reciba un string y capitalice la
 ```javascript
 // escribe tu función acá
 
+function capitalizar(string) {
+  if (string.length != 0) {
+    let rta = string[0].toUpperCase() + string.substring(1);
+    console.log(rta);
+  }
+}
 // código de prueba
 console.log(capitalizar("pedro")) // "Pedro"
 console.log(capitalizar("hola mundo")) // "Hola mundo"
@@ -384,6 +390,19 @@ Escribir una función llamada `capitalizar` que reciba un string y capitalice la
 ```javascript
 // escribe tu función acá
 
+function capitalizar(string) {
+  if (string.length != 0) {
+    let arrString = [];
+
+    for (caracter of string.split(" ")) {
+      caracter != ""
+        ? arrString.push(caracter[0].toUpperCase() + caracter.substring(1))
+        : "e";
+    }
+    let rta = arrString.join(" ");
+    console.log(rta);
+  }
+}
 // código de prueba
 console.log(capitalizar("hola mundo")) // "Hola Mundo"
 console.log(capitalizar("make it real")) // "Make It Real"
@@ -413,7 +432,15 @@ Escribir una función llamada `min` que reciba un arreglo de números y retorne 
 
 ```javascript
 // escribe tu función acá
-
+function min(array){
+    let nMin = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < nMin) {
+            nMin = array[i];
+        }
+    }
+    console.log(nMin)
+}
 // código de prueba
 console.log(min([3, 9, 6])) // 3
 console.log(min([67, 35, 54, 26])) // 26

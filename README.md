@@ -656,6 +656,31 @@ Escribir una función llamada `palabrasANumeros` que reciba un arreglo de string
 ```javascript
 // escribe tu función acá
 
+function palabrasANumeros(array) {
+  let newArr = [];
+  const datos = {
+    cero: 0,
+    uno: 1,
+    dos: 2,
+    tres: 3,
+    cuatro: 4,
+    cinco: 5,
+    seis: 6,
+    siete: 7,
+    ocho: 8,
+    nueve: 9,
+  };
+  for (let i = 0; i < array.length; i++) {
+    if (datos.hasOwnProperty(array[i])) {
+      //   newArr.push(array[i]);
+      newArr.push(datos[array[i]]);
+    } else {
+      array[i] = -1;
+      newArr.push(array[i]);
+    }
+  }
+  console.log(newArr);
+}
 // código de prueba
 console.log(["cero", "uno", "dos", "tres", "what?", "cuatro"]) // [0, 1, 2, 3, -1, 4]
 console.log(["cinco", "seis", "siete", "ocho", "nueve"]) // [5, 6, 7, 8, 9]

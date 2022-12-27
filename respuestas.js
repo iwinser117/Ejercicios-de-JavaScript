@@ -199,53 +199,52 @@
 //   console.log(newString);
 // }
 
-// function pares(array) {
-//   let rta = [];
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 === 0) {
-//       rta.push(array[i]);
-//     }
-//   }
-//   console.log(rta);
-//
+function pares(array) {
+  let rta = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      rta.push(array[i]);
+    }
+  }
+  console.log(rta);
+}
+function posiciones(array) {
+  const newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      newArr.push(i);
+    }
+  }
+  console.log(newArr);
+}
 
-// function posiciones(array){
-//     const newArr = []
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] % 2 === 0) {
-//             newArr.push(i);
-//         }
-//     }
-//     console.log(newArr);
-// }
+function duplicar(array) {
+  let rta = [];
+  for (let i = 0; i < array.length; i++) {
+    rta.push(array[i] * 2);
+  }
+  console.log(rta);
+}
 
-// function duplicar (array){
-//     let rta = [];
-//     for (let i = 0; i < array.length; i++) {
-//         rta.push(array[i]*2);
-//     }
-//     console.log(rta);
-// }
+function empiezanConA(array) {
+  let rta = [];
+  const r = array.filter((item) => {
+    if (item[0] == "a" || item[0] == "A") {
+      rta.push(item);
+    }
+  });
+  console.log(rta);
+}
 
-// function empiezanConA(array) {
-//   let rta = [];
-//   const r = array.filter((item) => {
-//     if (item[0] == "a" || item[0] == "A") {
-//       rta.push(item);
-//     }
-//   });
-//   console.log(rta);
-// }
-
-// function terminanConS(array) {
-//   let rta = [];
-//   const r = array.filter((item) => {
-//     if (item.endsWith("s") || item.endsWith("S")) {
-//       rta.push(item);
-//     }
-//   });
-//   console.log(rta);
-// }
+function terminanConS(array) {
+  let rta = [];
+  const r = array.filter((item) => {
+    if (item.endsWith("s") || item.endsWith("S")) {
+      rta.push(item);
+    }
+  });
+  console.log(rta);
+}
 
 // function imprimirMatriz(matriz) {
 //   let unir = matriz.join(",").split(",");
@@ -335,78 +334,66 @@ function palabrasANumeros(array) {
   });
 } */
 
-// function palabrasANumeros(array) {
-//   let newArr = [];
-//   const datos = {
-//     cero: 0,
-//     uno: 1,
-//     dos: 2,
-//     tres: 3,
-//     cuatro: 4,
-//     cinco: 5,
-//     seis: 6,
-//     siete: 7,
-//     ocho: 8,
-//     nueve: 9,
-//   };
-//   for (let i = 0; i < array.length; i++) {
-//     if (datos.hasOwnProperty(array[i])) {
-//       //   newArr.push(array[i]);
-//       newArr.push(datos[array[i]]);
-//     } else {
-//       array[i] = -1;
-//       newArr.push(array[i]);
-//     }
-//   }
-//   console.log(newArr);
-// }
+function palabrasANumeros(array) {
+  let newArr = [];
+  const datos = {
+    //     cero: 0,
+    //     uno: 1,
+    //     dos: 2,
+    //     tres: 3,
+    //     cuatro: 4,
+    //     cinco: 5,
+    //     seis: 6,
+    //     siete: 7,
+    //     ocho: 8,
+    //     nueve: 9,
+  };
+  for (let i = 0; i < array.length; i++) {
+    if (datos.hasOwnProperty(array[i])) {
+      //   newArr.push(array[i]);
+      newArr.push(datos[array[i]]);
+    } else {
+      array[i] = -1;
+      newArr.push(array[i]);
+    }
+  }
+  console.log(newArr);
+}
 
-// function numAsteriscos(array){
-//     let contador= 0;
-//     array.filter(item=> {
-//         item == "*" ? contador++ : contador
-//     })
-//     console.log(contador);
-// }
-
-// function numAsteriscos(matriz) {
-//   let array = matriz.join(",").split(",");
-//   let contador = 0;
-//   array.filter((item) => {
-//     item == "*" ? contador++ : contador;
-//   });
-//   console.log(contador);
-// }
+function numAsteriscos(array) {
+  let contador = 0;
+  array.filter((item) => {
+    item == "*" ? contador++ : contador;
+  });
+  console.log(contador);
+}
+function numAsteriscos(matriz) {
+  let array = matriz.join(",").split(",");
+  let contador = 0;
+  array.filter((item) => {
+    item == "*" ? contador++ : contador;
+  });
+  console.log(contador);
+}
+function max(array) {
+  let nMax = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > nMax) {
+      nMax = array[i];
+    }
+  }
+  console.log(nMax);
+}
 
 function distancia(str1, str2) {
   let arr1 = str1.split("");
   let arr2 = str2.split("");
-  let contador = 0;
-    
-  /*  const comparar = () => {
-    let letra = "";
-    let letra2 = "";
-    
-    for (let j = 0; j < arr1.length; j++) {
-      letra = arr1[j];
-      console.log(1)
-      if (letra === letra2) {
-        contador++;
-      }
+  let contador = arr2.length - arr1.length;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      contador++;
     }
-    for (let i = 0; i < arr2.length; i++) {
-      letra2 = arr2[i];
-      console.log(2)
-      if (letra === letra2) {
-        contador++;
-      }
-    }
-    
-  };
-  comparar() */
+  }
+
   console.log(contador);
 }
-
-distancia("hola", "hola"); // 0
-distancia("sol", "tol"); // 1
-distancia("carro", "correr"); // 3

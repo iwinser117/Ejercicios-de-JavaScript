@@ -414,9 +414,21 @@ console.log(capitalizar("")) // ""
 Escribir una función llamada `max` que reciba un arreglo de números y retorne el número máximo:
 
 **Nota:** Intentarlo hacer sin el método `Math.max` de JavaScript.
+function max(array){
+    return Math.max(...array);
+}
 
 ```javascript
 // escribe tu función acá
+ function max(array) {
+   let nMax = array[0];
+   for (let i = 1; i < array.length; i++) {
+     if (array[i] > nMax) {
+       nMax = array[i];
+     }
+   }
+   console.log(nMax);
+ }
 
 // código de prueba
 console.log(max([3, 9, 6])) // 9
@@ -736,7 +748,18 @@ Escribir una función llamada `distancia` que reciba dos strings y retorne el n�
 
 ```javascript
 // escribe tu función acá
+function distancia(str1, str2) {
+  let arr1 = str1.split("");
+  let arr2 = str2.split("");
+  let contador = arr2.length - arr1.length;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      contador++;
+    }
+  }
 
+  console.log(contador);
+}
 // código de prueba
 console.log(distancia("hola", "hola")) // 0
 console.log(distancia("sol", "tol")) // 1

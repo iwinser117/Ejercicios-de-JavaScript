@@ -580,7 +580,15 @@ Escribir una función llamada `terminanConS` que reciba un arreglo de strings y 
 
 ```javascript
 // escribe tu función acá
-
+function terminanConS(array) {
+  let rta = [];
+  const r = array.filter((item) => {
+    if (item.endsWith("s") || item.endsWith("S")) {
+      rta.push(item);
+    }
+  });
+  console.log(rta);
+}
 // código de prueba
 console.log(terminanConS(["pruebas", "arroz", "árbol", "tokens"])) // ["pruebas", "tokens"]
 console.log(terminanConS(["beta", "delta", "gama"])) // []

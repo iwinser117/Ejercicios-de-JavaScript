@@ -581,7 +581,10 @@ Escribir una función llamada `imprimirMatriz` que reciba una matriz (un arreglo
 
 ```javascript
 // escribe tu función acá
-
+function imprimirMatriz(matriz) {
+  let unir = matriz.join(",").split(",");
+  unir.forEach((item) => console.log(item));
+}
 // código de prueba
 console.log(imprimirMatriz([
   [1, 2, 3],
@@ -606,7 +609,41 @@ Escribir una función llamada `numerosAPalabras` que reciba un arreglo de númer
 
 ```javascript
 // escribe tu función acá
-
+function numerosAPalabras(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 0) {
+      array[i] = "cero";
+    }
+    if (array[i] === 1) {
+      array[i] = "uno";
+    }
+    if (array[i] === 2) {
+      array[i] = "dos";
+    }
+    if (array[i] === 3) {
+      array[i] = "tres";
+    }
+    if (array[i] === 4) {
+      array[i] = "cuatro";
+    }
+    if (array[i] === 5) {
+      array[i] = "cinco";
+    }
+    if (array[i] === 6) {
+      array[i] = "seis";
+    }
+    if (array[i] === 7) {
+      array[i] = "siete";
+    }
+    if (array[i] === 8) {
+      array[i] = "ocho";
+    }
+    if (array[i] === 9) {
+      array[i] = "nueve";
+    }
+  }
+  console.log(array);
+}
 // código de prueba
 console.log(numerosAPalabras([0, 1, 2, 3, 4])) // ["cero", "uno", "dos", "tres", "cuatro"]
 console.log(numerosAPalabras([5, 6, 7, 8, 9])) // ["cinco", "seis", "siete", "ocho", "nueve"]

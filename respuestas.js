@@ -237,15 +237,146 @@
 //   console.log(rta);
 // }
 
-function terminanConS(array) {
-  let rta = [];
-  const r = array.filter((item) => {
-    if (item.endsWith("s") || item.endsWith("S")) {
-      rta.push(item);
+// function terminanConS(array) {
+//   let rta = [];
+//   const r = array.filter((item) => {
+//     if (item.endsWith("s") || item.endsWith("S")) {
+//       rta.push(item);
+//     }
+//   });
+//   console.log(rta);
+// }
+
+// function imprimirMatriz(matriz) {
+//   let unir = matriz.join(",").split(",");
+
+//   unir.forEach((item) => console.log(item));
+// }
+
+// function numerosAPalabras(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === 0) {
+//       array[i] = "cero";
+//     }
+//     if (array[i] === 1) {
+//       array[i] = "uno";
+//     }
+//     if (array[i] === 2) {
+//       array[i] = "dos";
+//     }
+//     if (array[i] === 3) {
+//       array[i] = "tres";
+//     }
+//     if (array[i] === 4) {
+//       array[i] = "cuatro";
+//     }
+//     if (array[i] === 5) {
+//       array[i] = "cinco";
+//     }
+//     if (array[i] === 6) {
+//       array[i] = "seis";
+//     }
+//     if (array[i] === 7) {
+//       array[i] = "siete";
+//     }
+//     if (array[i] === 8) {
+//       array[i] = "ocho";
+//     }
+//     if (array[i] === 9) {
+//       array[i] = "nueve";
+//     }
+//   }
+//   console.log(array);
+// }
+/* 
+function palabrasANumeros(array) {
+  k = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === "cero") {
+      array[i] = 0;
     }
+    if (array[i] === "uno") {
+      array[i] = 1;
+    }
+    if (array[i] === "dos") {
+      array[i] = 2;
+    }
+    if (array[i] === "tres") {
+      array[i] = 3;
+    }
+    if (array[i] === "cuatro") {
+      array[i] = 4;
+    }
+    if (array[i] === "cinco") {
+      array[i] = 5;
+    }
+    if (array[i] === "seis") {
+      array[i] = 6;
+    }
+    if (array[i] === "siete") {
+      array[i] = 7;
+    }
+    if (array[i] === "ocho") {
+      array[i] = 8;
+    }
+    if (array[i] === "nueve") {
+      array[i] = 9;
+    }
+    k.push(array[i]);
+  }
+
+  k.map((item) => {
+    if (typeof item != Number) {
+      item = -1;
+    } else {
+      return item;
+    }
+    console.log(item + "hhh");
   });
-  console.log(rta);
+} */
+/* function palabrasANumeros(array) {
+  const datos = {
+    cero: 0,
+    uno: 1,
+    dos: 2,
+    tres: 3,
+    cuatro: 4,
+    cinco: 5,
+    seis: 6,
+    siete: 7,
+    ocho: 8,
+    nueve: 9,
+  };
+  
+} */
+function palabrasANumeros(array) {
+  let newArr = [];
+  const datos = {
+    cero: 0,
+    uno: 1,
+    dos: 2,
+    tres: 3,
+    cuatro: 4,
+    cinco: 5,
+    seis: 6,
+    siete: 7,
+    ocho: 8,
+    nueve: 9,
+  };
+  for (let i = 0; i < array.length; i++) {
+    if (datos.hasOwnProperty(array[i])) {
+      newArr.push(array[i]);
+    } else {
+      array[i] = -1;
+      console.log(array[i])
+      newArr.push(array[i]);
+    }
+  }
+  console.log(newArr)
 }
-terminanConS(["pruebas", "arroz", "árbol", "tokens"]); // ["pruebas", "tokens"]
-terminanConS(["beta", "delta", "gama"]); // []
-terminanConS([]);
+palabrasANumeros(["cero", "uno", "dos", "tres", "what?", "cuatro"]); // [0, 1, 2, 3, -1, 4]
+// palabrasANumeros(["cinco", "seis", "siete", "ocho", "nueve"]); // [5, 6, 7, 8, 9]
+
+/* for (n of array) {
+  item === n ? k.push(datos[item]) : k.push((n = 1)); 
+*/

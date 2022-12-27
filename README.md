@@ -692,7 +692,13 @@ Escribir una función llamada `numAsteriscos` que reciba un arreglo y retorne el
 
 ```javascript
 // escribe tu función acá
-
+function numAsteriscos(array){
+    let contador= 0;
+    array.filter(item=> {
+        item == "*" ? contador++ : contador
+    })
+    console.log(contador);
+}
 // código de prueba
 console.log(numAsteriscos(['', '*', '', '*'])) // 2
 console.log(numAsteriscos(['*', '*', '*'])) // 3
@@ -705,7 +711,14 @@ Escribir una función llamada `numAsteriscos` que reciba una matriz (un arreglo 
 
 ```javascript
 // escribe tu función acá
-
+function numAsteriscos(matriz) {
+  let array = matriz.join(",").split(",");
+  let contador = 0;
+  array.filter((item) => {
+    item == "*" ? contador++ : contador;
+  });
+  console.log(contador);
+}
 // código de prueba
 console.log(numAsteriscos([
   ['*', '', '*'],

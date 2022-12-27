@@ -361,3 +361,52 @@ function palabrasANumeros(array) {
 //   console.log(newArr);
 // }
 
+// function numAsteriscos(array){
+//     let contador= 0;
+//     array.filter(item=> {
+//         item == "*" ? contador++ : contador
+//     })
+//     console.log(contador);
+// }
+
+// function numAsteriscos(matriz) {
+//   let array = matriz.join(",").split(",");
+//   let contador = 0;
+//   array.filter((item) => {
+//     item == "*" ? contador++ : contador;
+//   });
+//   console.log(contador);
+// }
+
+function distancia(str1, str2) {
+  let arr1 = str1.split("");
+  let arr2 = str2.split("");
+  let contador = 0;
+    
+  /*  const comparar = () => {
+    let letra = "";
+    let letra2 = "";
+    
+    for (let j = 0; j < arr1.length; j++) {
+      letra = arr1[j];
+      console.log(1)
+      if (letra === letra2) {
+        contador++;
+      }
+    }
+    for (let i = 0; i < arr2.length; i++) {
+      letra2 = arr2[i];
+      console.log(2)
+      if (letra === letra2) {
+        contador++;
+      }
+    }
+    
+  };
+  comparar() */
+  console.log(contador);
+}
+
+distancia("hola", "hola"); // 0
+distancia("sol", "tol"); // 1
+distancia("carro", "correr"); // 3

@@ -182,6 +182,70 @@
 //     console.log(nMin)
 // }
 
-function password(string){
-    
+// function password(string) {
+//   let arr = string.toLowerCase().split("");
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === "a") {
+//       arr[i] = "4";
+//     } else if (arr[i] === "e") {
+//       arr[i] = "3";
+//     } else if (arr[i] === "i") {
+//       arr[i] = "1";
+//     } else if (arr[i] === "o") {
+//       arr[i] = "0";
+//     }
+//   }
+//   let newString = arr.join("").replace(/ /g, "");
+//   console.log(newString);
+// }
+
+// function pares(array) {
+//   let rta = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 === 0) {
+//       rta.push(array[i]);
+//     }
+//   }
+//   console.log(rta);
+//
+
+// function posiciones(array){
+//     const newArr = []
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] % 2 === 0) {
+//             newArr.push(i);
+//         }
+//     }
+//     console.log(newArr);
+// }
+
+// function duplicar (array){
+//     let rta = [];
+//     for (let i = 0; i < array.length; i++) {
+//         rta.push(array[i]*2);
+//     }
+//     console.log(rta);
+// }
+
+// function empiezanConA(array) {
+//   let rta = [];
+//   const r = array.filter((item) => {
+//     if (item[0] == "a" || item[0] == "A") {
+//       rta.push(item);
+//     }
+//   });
+//   console.log(rta);
+// }
+
+function terminanConS(array) {
+  let rta = [];
+  const r = array.filter((item) => {
+    if (item.endsWith("s") || item.endsWith("S")) {
+      rta.push(item);
+    }
+  });
+  console.log(rta);
 }
+terminanConS(["pruebas", "arroz", "árbol", "tokens"]); // ["pruebas", "tokens"]
+terminanConS(["beta", "delta", "gama"]); // []
+terminanConS([]);

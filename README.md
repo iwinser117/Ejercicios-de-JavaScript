@@ -460,7 +460,22 @@ Escribir una función llamada `password` que reciba un string y retorne un nuevo
 
 ```javascript
 // escribe tu función acá
-
+function password(string) {
+  let arr = string.toLowerCase().split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "a") {
+      arr[i] = "4";
+    } else if (arr[i] === "e") {
+      arr[i] = "3";
+    } else if (arr[i] === "i") {
+      arr[i] = "1";
+    } else if (arr[i] === "o") {
+      arr[i] = "0";
+    }
+  }
+  let newString = arr.join("").replace(/ /g, "");
+  console.log(newString);
+}
 // código de prueba
 console.log(password("hola")) // "h0l4"
 console.log(password("esta es una prueba")) // "3st43sun4pru3b4"
@@ -473,7 +488,15 @@ Escribir una función llamada `pares` que reciba un arreglo de números y retorn
 
 ```javascript
 // escribe tu función acá
-
+function pares(array) {
+  let rta = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      rta.push(array[i]);
+    }
+  }
+  console.log(rta);
+}
 // código de prueba
 console.log(pares([1, 2, 3, 4, 5, 6])) // [2, 4, 6]
 console.log(pares([])) // []
@@ -485,6 +508,15 @@ Escribir una función llamada `posiciones` que reciba un arreglo de números y r
 
 ```javascript
 // escribe tu función acá
+function posiciones(array){
+    const newArr = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            newArr.push(i);
+        }
+    }
+    console.log(newArr);
+}
 
 // código de prueba
 console.log(posiciones([1, 2, 3, 4, 5, 6])) // [1, 3, 5]
@@ -497,7 +529,13 @@ Escribir una función llamada `duplicar` que reciba un arreglo de números y ret
 
 ```javascript
 // escribe tu función acá
-
+function duplicar (array){
+    let rta = [];
+    for (let i = 0; i < array.length; i++) {
+        rta.push(array[i]*2);
+    }
+    console.log(rta);
+}
 // código de prueba
 console.log(duplicar([1, 2, 3])) // [2, 4, 6]
 console.log(duplicar([])) // []
@@ -509,7 +547,15 @@ Escribir una función llamada `empiezanConA` que reciba un arreglo de strings y 
 
 ```javascript
 // escribe tu función acá
-
+function empiezanConA(array) {
+  let rta = [];
+  const r = array.filter((item) => {
+    if (item[0] == "a" || item[0] == "A") {
+      rta.push(item);
+    }
+  });
+  console.log(rta);
+}
 // código de prueba
 console.log(empiezanConA(["beta", "alfa", "Arbol", "gama"])) // ["alfa", "Arbol"]
 console.log(empiezanConA(["beta", "delta", "gama"])) // []
